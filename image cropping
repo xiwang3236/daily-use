@@ -1,0 +1,13 @@
+# image cropping for specific region
+import cv2
+
+for i in range(1,19):
+    img=cv2.imread('E:/PROJECT/im/data/RGB' + str(i) + '.tif')
+    # Prints Dimensions of the image
+
+    print(img.shape)
+    
+    #Adjust selection area
+    cropped_image = img[400:900, 800:1300]
+    cv2.imwrite('E:/PROJECT/im/revise/RGB_cv_revise' + str(i) + '.tif', cropped_image)
+    i+=1
